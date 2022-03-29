@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\ANUPayments.csproj": {}
+    "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\ANUPayments.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\ANUPayments.csproj": {
+    "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\ANUPayments.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\ANUPayments.csproj",
+        "projectUniqueName": "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\ANUPayments.csproj",
         "projectName": "ANUPayments",
-        "projectPath": "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\ANUPayments.csproj",
+        "projectPath": "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\ANUPayments.csproj",
         "packagesPath": "C:\\Users\\aalnj\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\obj\\",
+        "outputPath": "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\aalnj\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +45,10 @@
               "target": "Package",
               "version": "[2.0.3, )",
               "autoReferenced": true
+            },
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.1, )"
             }
           },
           "imports": [
