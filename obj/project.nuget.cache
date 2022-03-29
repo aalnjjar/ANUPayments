@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "sk4MCdD5o24RGYEdIDeUA/IW7Xyyw8xmr11VSkfA5SD7EeXzIC35vTHErpxhyAWhjqXdQWMZSSrYxfeEtygm1A==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aalnj\\source\\repos\\ANUPayments\\ANUPayments.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aalnj\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aalnj\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512"
+  ],
+  "logs": []
+}
