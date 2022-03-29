@@ -2,8 +2,8 @@
 {
     public enum Mode
     {
-        Staging,
-        Production
+        Production = 0,
+        Staging = 1
     }
 
     public class ApiConfiguration
