@@ -1,0 +1,9 @@
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\bin\Debug\netstandard2.0\ANUPayments.deps.json
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\bin\Debug\netstandard2.0\ANUPayments.dll
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\bin\Debug\netstandard2.0\ANUPayments.pdb
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.csproj.AssemblyReference.cache
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.AssemblyInfoInputs.cache
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.AssemblyInfo.cs
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.csproj.CoreCompileInputs.cache
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.dll
+C:\Users\aalnj\OneDrive\Documents\GitHub\ANUPayments\obj\Debug\netstandard2.0\ANUPayments.pdb
