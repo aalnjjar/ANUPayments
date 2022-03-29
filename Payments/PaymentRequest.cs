@@ -24,7 +24,7 @@ namespace ANUPayments.Payments
             {
                 var request = GenerateRequest(requestModel);
                 var apiResponse =
-                    await _httpClientFactory.PostAsync<object, object>("charges", request);
+                    await _httpClientFactory.PostAsync<object, object>("", request);
 
                 return new GenericResponse<object, object>();
             }
