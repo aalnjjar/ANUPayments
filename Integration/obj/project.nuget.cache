@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "Molo6vepGfEhJ9oa4NqaQOaYwuouWBNiGVN2hYGAOpwClKOQAj+vR8HI3p8Wz7mwWgcXF9boYooSGjr9Cz345w==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\aalnj\\OneDrive\\Documents\\GitHub\\ANUPayments\\Integration\\ANUPayments.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\aalnj\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
+    "C:\\Users\\aalnj\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Users\\aalnj\\.nuget\\packages\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\aalnj\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
