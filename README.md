@@ -17,10 +17,10 @@
                 Mode = Mode.Staging,
                 Password = "test",
                 UserName = "test",
-                ApiSecretKeyStaging = "jtest123",
-                MerchantId = "1201",
-                XHeaderAuthorization = "hWFfEkzkYE1X691J4qmcuZHAoet7Ds7ADhL",
-                ApiSecretKeyLive = "jtest123"
+                ApiSecretKeyStaging = "key",
+                MerchantId = "1234",
+                XHeaderAuthorization = "headear",
+                ApiSecretKeyLive = "key"
             };
            
 
