@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using ANUPayments.Helpers;
@@ -18,15 +19,15 @@ namespace ANUPayments.Payments
         }
 
 
-        public async Task<GenericResponse<object, object>> Create(PaymentRequestModel requestModel)
+        public async Task<GenericResponse<UPaymentResponses, UPaymentResponses>> Create(PaymentRequestModel requestModel)
         {
             try
             {
                 var request = GenerateRequest(requestModel);
                 var apiResponse =
-                    await _httpClientFactory.PostAsync<object, object>("", request);
+                    await _httpClientFactory.PostAsync<UPaymentResponses, UPaymentResponses>("", request);
 
-                return new GenericResponse<object, object>();
+                return apiResponse;
             }
             catch (Exception ex)
             {
@@ -45,7 +46,7 @@ namespace ANUPayments.Payments
                 api_key = _apiConfiguration.ApiSecretKey,
                 order_id = requestModel.OrderId,
                 total_price = requestModel.TotalPrice,
-                CurrencyCode = requestModel.CurrencyCode,
+                CurrencyCode = requestModel.CurrencyCode.ToUpper(),
                 success_url = requestModel.SuccessUrl,
                 error_url = requestModel.ErrorUrl,
                 test_mode = _apiConfiguration.Mode.IntValue(),
@@ -54,12 +55,12 @@ namespace ANUPayments.Payments
                 CstMobile = requestModel.CustomerMobile,
                 payment_gateway = requestModel.PaymentGateway,
                 whitelabled = requestModel.Whitelabled,
-                ProductTitle = requestModel.Products.Select(i => i.ProductTitle).ToArray(),
-                ProductName = requestModel.Products.Select(i => i.ProductName).ToArray(),
-                ProductPrice = requestModel.Products.Select(i => i.ProductPrice).ToArray(),
-                ProductQty = requestModel.Products.Select(i => i.ProductQty).ToArray(),
+                ProductTitle = requestModel.Products.Select(i => i.ProductTitle).ToList(),
+                ProductName = requestModel.Products.Select(i => i.ProductName).ToList(),
+                ProductPrice = requestModel.Products.Select(i => i.ProductPrice).ToList(),
+                ProductQty = requestModel.Products.Select(i => i.ProductQty).ToList(),
                 reference = requestModel.Reference,
-                ExtraMerchantsData = requestModel.ExtraMerchantsData.ToArray(),
+                ExtraMerchantsData = requestModel.ExtraMerchantsData != null ? requestModel.ExtraMerchantsData.ToList() : new List<PaymentRequestExtraMerchantsDataModel>(),
                 notifyURL = requestModel.NotifyURL
             };
         }

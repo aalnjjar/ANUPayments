@@ -16,7 +16,7 @@ namespace ANUPayments.Helpers
         public HttpClientFactory(string xHeader, Mode apiMode = Mode.Staging)
         {
             var apiVersion = apiMode == Mode.Production ? "payment-request" : "test-payment";
-            _httpClient = new HttpClient {BaseAddress = new Uri($"{BaseUri}{apiVersion}/")};
+            _httpClient = new HttpClient { BaseAddress = new Uri($"{BaseUri}{apiVersion}") };
             _httpClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
             _httpClient.DefaultRequestHeaders.Add("x-Authorization", xHeader);
         }

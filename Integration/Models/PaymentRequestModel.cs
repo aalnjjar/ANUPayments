@@ -110,7 +110,7 @@ namespace ANUPayments.Models
     }
 }
 
-public abstract class PaymentRequestProductsModel
+public class PaymentRequestProductsModel
 {
     /// <summary>
     /// product title description
