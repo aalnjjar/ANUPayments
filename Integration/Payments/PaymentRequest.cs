@@ -19,17 +19,24 @@ namespace ANUPayments.Payments
         }
 
 
-        public async Task<GenericResponse<UPaymentResponses, UPaymentResponses>> Create(PaymentRequestModel requestModel)
+        public async Task<GenericResponse<UPaymentResponses, UPaymentResponses>> Create(
+            PaymentRequestModel requestModel)
         {
             try
             {
                 var request = GenerateRequest(requestModel);
-                var apiResponse =
+                GenericResponse<UPaymentResponses, UPaymentResponses> apiResponse =
                     await _httpClientFactory.PostAsync<UPaymentResponses, UPaymentResponses>("", request);
+                if (!apiResponse.IsSuccess || apiResponse.SuccessResponse.Status.ToLower() == "success")
+                    return apiResponse;
+
+                apiResponse.IsSuccess = false;
+                apiResponse.FailureResponse = apiResponse.SuccessResponse;
+                apiResponse.FailureResponse = new UPaymentResponses();
 
                 return apiResponse;
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
@@ -60,7 +67,9 @@ namespace ANUPayments.Payments
                 ProductPrice = requestModel.Products.Select(i => i.ProductPrice).ToList(),
                 ProductQty = requestModel.Products.Select(i => i.ProductQty).ToList(),
                 reference = requestModel.Reference,
-                ExtraMerchantsData = requestModel.ExtraMerchantsData != null ? requestModel.ExtraMerchantsData.ToList() : new List<PaymentRequestExtraMerchantsDataModel>(),
+                ExtraMerchantsData = requestModel.ExtraMerchantsData != null
+                    ? requestModel.ExtraMerchantsData.ToList()
+                    : new List<PaymentRequestExtraMerchantsDataModel>(),
                 notifyURL = requestModel.NotifyURL
             };
         }
