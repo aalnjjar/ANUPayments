@@ -16,6 +16,7 @@
 
         public bool IsSuccess { get; set; }
         public string JsonResponse { get; set; }
+        public string JsonRequest { get; set; }
         public T SuccessResponse { get; set; }
         public TU FailureResponse { get; set; }
     }

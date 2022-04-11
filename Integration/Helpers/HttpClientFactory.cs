@@ -61,6 +61,7 @@ namespace ANUPayments.Helpers
             var response = await _httpClient.PostAsync($"{endpoint}", httpContent);
             var result = new GenericResponse<T, TU>
             {
+                JsonRequest = json,
                 IsSuccess = response.IsSuccessStatusCode
             };
             var jsonResponse = await response.Content.ReadAsStringAsync();
